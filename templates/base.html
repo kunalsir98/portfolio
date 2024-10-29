@@ -6,11 +6,106 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Inline styles for aesthetic enhancement */
+        nav {
+            background-color: #6a82fb; /* Vibrant background color for navbar */
+            color: white; /* Text color */
+            padding: 15px 0; /* Padding for navbar */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        }
+
+        nav .container {
+            max-width: 1200px; /* Max width for navbar content */
+            margin: 0 auto; /* Centering */
+            display: flex; /* Flexbox layout */
+            justify-content: space-between; /* Space between title and nav items */
+            align-items: center; /* Center items vertically */
+        }
+
+        nav h1 a {
+            color: white; /* Link color for title */
+            text-decoration: none; /* No underline */
+            font-size: 1.8rem; /* Title font size */
+            transition: color 0.3s; /* Transition effect */
+        }
+
+        nav h1 a:hover {
+            color: #ff6f61; /* Change color on hover */
+        }
+
+        nav ul {
+            list-style: none; /* Remove default list styles */
+            display: flex; /* Flexbox for horizontal layout */
+            margin: 0; /* Reset margins */
+            padding: 0; /* Reset padding */
+        }
+
+        nav ul li {
+            margin-left: 20px; /* Space between nav items */
+        }
+
+        nav ul li a {
+            color: white; /* Link color */
+            text-decoration: none; /* No underline */
+            font-size: 1rem; /* Font size for links */
+            position: relative; /* For pseudo-element */
+            transition: color 0.3s; /* Transition effect */
+        }
+
+        nav ul li a::after {
+            content: ''; /* Pseudo-element for underline */
+            display: block;
+            height: 2px; /* Thickness of underline */
+            width: 0; /* Width will animate */
+            background: #ff6f61; /* Color of underline */
+            transition: width 0.3s; /* Animation */
+            position: absolute;
+            left: 50%; /* Center the underline */
+            bottom: -5px; /* Position below the text */
+            transform: translateX(-50%); /* Center alignment */
+        }
+
+        nav ul li a:hover::after {
+            width: 100%; /* Expand underline on hover */
+        }
+
+        /* Button Styles */
+        .button {
+            background-color: #ff6f61; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* No underline */
+            border-radius: 25px; /* Rounded button */
+            font-size: 1rem; /* Font size */
+            transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+            display: inline-block; /* Block element for padding */
+            margin-top: 10px; /* Space above the button */
+        }
+
+        .button:hover {
+            background-color: #e65c52; /* Change background color on hover */
+            transform: scale(1.05); /* Slight scale on hover */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333; /* Dark background for footer */
+            color: white; /* White text color */
+            padding: 15px 0; /* Padding for footer */
+            text-align: center; /* Center text */
+        }
+
+        footer .container {
+            max-width: 1200px; /* Max width for footer content */
+            margin: 0 auto; /* Centering */
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div class="container">
-            <h1><a href="/">Kunal chopde</a></h1>
+            <h1><a href="/">Kunal Chopde</a></h1>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/projects">Projects</a></li>
@@ -25,7 +120,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Your Name - All Rights Reserved</p>
+            <p>© 2024 Kunal Chopde - All Rights Reserved</p>
         </div>
     </footer>
 </body>

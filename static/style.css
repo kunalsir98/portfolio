@@ -1,185 +1,189 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Clean font for readability */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333; /* Dark text for contrast */
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color */
-    text-align: center;
-    overflow-x: hidden; /* Hide horizontal overflow */
-    overflow-y: auto; /* Enable vertical scrolling */
+header {
+    background: linear-gradient(135deg, #f0e1ff, #fce4ec);
+    padding: 40px 20px; /* Padding for header */
+    text-align: center; /* Centered text */
+    color: #6a1b9a; /* Dark purple color */
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #ff6f61; /* Keep navigation bar color */
-    padding: 10px 0; /* Reduced padding */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+header h1 {
+    font-size: 3rem; /* Large title */
+    margin: 0; /* Remove default margin */
 }
 
-nav .container {
-    max-width: 1200px; /* Set a max-width for the container */
-    margin: 0 auto; /* Center the container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header p {
+    font-size: 1.2rem; /* Subtitle size */
+    margin-top: 10px; /* Spacing above subtitle */
 }
 
-nav h1 a {
-    color: white;
-    font-size: 2rem;
-    text-decoration: none;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px; /* Reduced gap between items */
-    margin-left: 30px; /* Reduced margin */
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem; /* Slightly smaller font size */
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffdab9;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #1e1e1e; /* Darker hero section */
-    padding: 30px 0; /* Reduced padding */
-}
-
-.hero .container {
-    max-width: 900px; /* Set a max-width for the hero section */
-    margin: 0 auto; /* Center the container */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero h1 {
-    font-size: 2.5rem; /* Slightly smaller font size */
-    margin-bottom: 15px; /* Reduced margin */
-    color: #ffcc80; /* Light color for contrast */
-}
-
-.hero p {
-    font-size: 1.1rem; /* Slightly smaller font size */
-    color: #ffecb3; /* Lighter shade for readability */
-    margin-bottom: 20px; /* Reduced margin */
-    max-width: 600px;
-}
-
-.hero-image img {
-    max-width: 150px; /* Slightly smaller image size */
-    border-radius: 50%;
-    border: 5px solid #ff6f61;
-}
-
-.button {
-    background-color: #ff9800;
-    color: white;
-    padding: 10px 20px; /* Reduced padding */
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1rem; /* Slightly smaller font size */
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #fb8c00;
-}
-
-/* Projects Section */
+/* Projects Section Styles */
 .projects {
-    background-color: #1e1e1e; /* Dark background for projects */
-    padding: 30px 0; /* Reduced padding */
+    background: linear-gradient(135deg, #f0e1ff, #fce4ec);
+    padding: 50px 20px; /* Padding around the section */
+    animation: backgroundAnimation 5s ease infinite alternate; /* Animated background */
 }
 
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #f0e1ff, #fce4ec); }
+    100% { background: linear-gradient(135deg, #f8bbd0, #e1bee7); }
+}
+
+.container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Section Title */
 .projects h2 {
-    font-size: 2rem; /* Slightly smaller font size */
-    color: #ff7043; /* Keep original color */
-    margin-bottom: 30px; /* Reduced margin */
+    font-size: 2.5rem; /* Title size */
+    color: #6a1b9a; /* Dark purple for contrast */
+    margin-bottom: 10px; /* Spacing below title */
+    text-align: center; /* Center title */
 }
 
+/* Section Description */
+.section-description {
+    text-align: center; /* Center the description */
+    font-size: 1.2rem; /* Description size */
+    color: #555; /* Grey text for subtlety */
+    margin-bottom: 40px; /* Spacing below description */
+}
+
+/* Project Grid */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Reduced min-width */
-    gap: 15px; /* Reduced gap */
-    padding: 0 20px; /* Reduced padding */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
 }
 
+/* Project Card Styles */
 .project-card {
-    background-color: #2c2c2c; /* Dark card background */
-    padding: 15px; /* Reduced padding */
-    border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Darker shadow */
-    transition: transform 0.3s;
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+    text-align: center; /* Center text */
 }
 
+/* Project Card Hover Effects */
 .project-card:hover {
-    transform: translateY(-5px); /* Reduced hover effect */
-    background-color: #3c3c3c; /* Lighter on hover */
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
+/* Project Image Styles */
+.project-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 5px solid #ff6f91; /* Light pink border at the bottom of images */
+}
+
+/* Project Title */
 .project-card h3 {
-    color: #ff5722; /* Keep original color */
-    margin-bottom: 5px; /* Reduced margin */
+    font-size: 1.5rem; /* Title size */
+    color: #ff4081; /* Bright pink text for project titles */
+    margin: 10px 0; /* Spacing around title */
 }
 
+/* Project Description */
 .project-card p {
-    font-size: 0.9rem; /* Slightly smaller font size */
-    color: #b0b0b0; /* Lighter gray for description */
-    margin-bottom: 15px; /* Reduced margin */
+    font-size: 1rem; /* Description size */
+    color: #666; /* Dark grey text for description */
+    padding: 0 15px; /* Padding around text */
 }
 
-.project-card a {
-    background-color: #ff9800; /* Button background */
-    color: white;
-    padding: 8px 15px; /* Reduced padding */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+/* Button Styles */
+.button {
+    display: inline-block; /* Block-level button */
+    padding: 10px 20px; /* Padding around button */
+    color: #ffffff; /* Text color */
+    background-color: #ff4081; /* Bright pink button color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+    margin: 15px 0; /* Margin around button */
 }
 
-.project-card a:hover {
-    background-color: #fb8c00;
+/* Button Hover Effects */
+.button:hover {
+    background-color: #ff6f91; /* Slightly lighter pink on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Contact Section */
+/* Contact Section Styles */
 .contact {
-    background-color: #1e1e1e; /* Dark background for contact */
-    padding: 30px 0; /* Reduced padding */
+    background: linear-gradient(135deg, #fce4ec, #f0e1ff); /* Light pink to soft lavender gradient */
+    padding: 50px 20px; /* Padding around the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #333; /* Dark text for contrast */
 }
 
+.container {
+    max-width: 800px; /* Max width for content */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Section Title */
 .contact h2 {
-    font-size: 2rem; /* Slightly smaller font size */
-    color: #4caf50; /* Keep original color */
-    margin-bottom: 15px; /* Reduced margin */
+    text-align: center; /* Center the title */
+    font-size: 2.5rem; /* Title size */
+    color: #6a1b9a; /* Dark purple for title */
+    margin-bottom: 10px; /* Spacing below title */
 }
 
+/* Section Description */
 .contact p {
-    font-size: 1rem; /* Slightly smaller font size */
-    color: #388e3c; /* Keep original color */
+    text-align: center; /* Center the description */
+    font-size: 1.2rem; /* Description size */
+    color: #555; /* Grey for better readability */
+    margin-bottom: 20px; /* Spacing below description */
 }
 
-/* Footer */
+/* Contact Details */
+.contact-details {
+    text-align: center; /* Center the details */
+    font-size: 1rem; /* Font size for contact details */
+    color: rgba(0, 0, 0, 0.7); /* Darker grey for contact details */
+}
+
+/* Link Styles */
+.contact a {
+    color: #ff4081; /* Bright pink for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 15px 0; /* Reduced padding */
-    text-align: center;
-    position: relative;
-    width: 100%;
+    background-color: #6a1b9a; /* Dark purple footer */
+    color: #ffffff; /* White text */
+    text-align: center; /* Centered text */
+    padding: 20px; /* Padding for footer */
+    position: relative; /* Position footer at bottom */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .projects h2, .contact h2 {
+        font-size: 2rem; /* Smaller title size on mobile */
+    }
+    .project-card h3 {
+        font-size: 1.2rem; /* Smaller project title size on mobile */
+    }
 }

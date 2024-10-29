@@ -4,72 +4,30 @@
 <section class="projects">
     <div class="container">
         <h2>My Projects</h2>
+        <p class="section-description">Explore the projects I've worked on, showcasing my skills and creativity.</p>
         <div class="project-grid">
+            {% for project in [
+                {'image': 'images/scrapping.jpeg', 'title': 'Flipkart Web Scraper', 'description': 'Extract product details, reviews, and offers from Flipkart using Python and Flask.', 'link': 'https://github.com/kunalsir98/flipkart_scraping.git'},
+                {'image': 'images/mushroom.jpeg', 'title': 'Mushroom Classification', 'description': 'A machine learning project based on mushroom classification.', 'link': 'https://github.com/kunalsir98/internship_mushroom_classification.git'},
+                {'image': 'images/concrete.jpeg', 'title': 'Concrete Strength Prediction', 'description': 'A project which helps predict the strength of concrete.', 'link': 'https://github.com/kunalsir98/internship_Concrete-Compressive-Strength-Prediction.git'},
+                {'image': 'images/credit card.jpeg', 'title': 'Credit Card Fraud Detection', 'description': 'Predict fraudulent credit card transactions using machine learning.', 'link': 'https://github.com/kunalsir98/credit-fault-detection.git'},
+                {'image': 'images/breast cancer.jpeg', 'title': 'Breast Cancer Prediction', 'description': 'A model for predicting the diagnosis of breast cancer.', 'link': 'https://github.com/kunalsir98/breast_cancer.git'},
+                {'image': 'images/loan.jpeg', 'title': 'Loan Approval Prediction', 'description': 'Predict loan approval status using machine learning models and Flask.', 'link': 'https://github.com/kunalsir98/loan-approval-prediction.git'},
+                {'image': 'images/crm.jpeg', 'title': 'Customer Relationship Analysis', 'description': 'A machine learning project for understanding customer relationships.', 'link': 'https://github.com/kunalsir98/Customer-Relationship-analysis.git'},
+                {'image': 'images/z.jpeg', 'title': 'Zomato Service Prediction', 'description': 'A machine learning system for predicting Zomato\'s delivery time.', 'link': 'https://github.com/kunalsir98/Delivery.git'},
+                {'image': 'images/next.jpeg', 'title': 'Next Word Predictor', 'description': 'A project based on NLP.', 'link': 'https://github.com/kunalsir98/next-word-predictor-LSTM.git'},
+                {'image': 'images/abalone.jpeg', 'title': 'Abalone Prediction', 'description': 'A project to predict the sex of an abalone.', 'link': 'https://github.com/kunalsir98/abalone_prediction.git'},
+                {'image': 'images/gemstone.jpeg', 'title': 'Gemstone Prediction', 'description': 'Predict the prices of various gemstones.', 'link': 'https://github.com/kunalsir98/gemstone-prediction.git'},
+                {'image': 'images/hardware.jpeg', 'title': 'Computer Hardware Prediction', 'description': 'Predict computer hardware speed.', 'link': 'https://github.com/kunalsir98/computer-hardware.git'},
+                {'image': 'images/spam classifier.jpeg', 'title': 'Spam Email Classifier', 'description': 'A classification model that identifies and filters out spam emails.', 'link': 'https://github.com/kunalsir98/spam-detection-kunal.git'}
+            ] %}
             <div class="project-card">
-                <h3>Flipkart Web Scraper</h3>
-                <p>Extract product details, reviews, and offers from Flipkart using Python and Flask.</p>
-                <a href="https://github.com/kunalsir98/flipkart_scraping.git" class="button">View Project</a>
+                <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}" class="project-image">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <a href="{{ project.link }}" class="button" target="_blank">View Project</a>
             </div>
-            <div class="project-card">
-                <h3>Mushroom Classification</h3>
-                <p>A machine learning project based on mushroom classification.</p>
-                <a href="https://github.com/kunalsir98/internship_mushroom_classification.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Compressive concrete strength prediction</h3>
-                <p>A project which will help us to predict strength of Concrete.</p>
-                <a href="https://github.com/kunalsir98/internship_Concrete-Compressive-Strength-Prediction.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Credit Card Fraud Detection</h3>
-                <p>Predict fraudulent credit card transactions using machine learning.</p>
-                <a href="https://github.com/kunalsir98/credit-fault-detection.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Breast Cancer Prediction</h3>
-                <p>A model for predicting the diagnosis of breast cancer.</p>
-                <a href="https://github.com/kunalsir98/breast_cancer.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Loan Approval Prediction</h3>
-                <p>Predict loan approval status using machine learning models and Flask.</p>
-                <a href="https://github.com/kunalsir98/loan-approval-prediction.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Customer relationship analysis</h3>
-                <p>A machine learning project for understanding Customer relationship.</p>
-                <a href="https://github.com/kunalsir98/Customer-Relationship-analysis.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Zomato service prediction</h3>
-                <p>A machine learning system for predicting how Zomato is delevering their order and how much time they require to deliver it.</p>
-                <a href="https://github.com/kunalsir98/Delivery.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Next word predictor</h3>
-                <p>A project based on nlp.</p>
-                <a href="https://github.com/kunalsir98/next-word-predictor-LSTM.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Abalone_Prediction</h3>
-                <p>A project which will help to predict sex of abalone.</p>
-                <a href="https://github.com/kunalsir98/abalone_prediction.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Gemstone Prediction</h3>
-                <p>Predict various Gemstone price.</p>
-                <a href="https://github.com/kunalsir98/gemstone-prediction.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Computer hardware prediction</h3>
-                <p>Predict computer hardware speed.</p>
-                <a href="https://github.com/kunalsir98/computer-hardware.git" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Spam Email Classifier</h3>
-                <p>A classification model that identifies and filters out spam emails.</p>
-                <a href="https://github.com/kunalsir98/spam-detection-kunal.git" class="button">View Project</a>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
