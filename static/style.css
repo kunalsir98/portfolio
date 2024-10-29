@@ -57,11 +57,12 @@ header p {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    flex-direction: column; /* Stack on mobile */
 }
 
 .hero-text {
-    flex: 1;
-    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .hero-text h1 {
@@ -94,10 +95,7 @@ header p {
 }
 
 .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none; /* Hide on mobile */
 }
 
 /* Profile Image Styles */
@@ -298,21 +296,26 @@ footer p {
         font-size: 2.5rem;
     }
 
+    header p {
+        font-size: 1.2rem; /* Adjust paragraph font size for mobile */
+    }
+
     .hero-content {
-        flex-direction: column;
+        flex-direction: column; /* Stack content on mobile */
     }
 
-    .hero-text {
-        margin-right: 0;
-        margin-bottom: 20px;
+    .hero-image {
+        display: block; /* Show hero image on mobile */
+        width: 100%; /* Make it responsive */
+        height: auto; /* Keep aspect ratio */
+        margin-top: 20px;
     }
 
-    .profile-image {
-        width: 180px;
-        height: 180px;
+    .project-card h3 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
     }
 
-    .projects h2 {
-        font-size: 2.2rem;
+    .project-card p {
+        font-size: 0.9rem; /* Adjust description font size for mobile */
     }
 }
