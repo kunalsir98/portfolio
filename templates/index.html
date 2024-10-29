@@ -3,13 +3,15 @@
 {% block content %}
 <section class="hero">
     <div class="container">
-        <div class="hero-text">
-            <h1>Hello, My Name is Kunal Chopde</h1>
-            <p>I'm a passionate data science enthusiast. I create projects that solve real-world problems using data and AI.</p>
-            <a href="/projects" class="button">View My Projects</a>
-        </div>
-        <div class="hero-image">
-            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Your Name">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hello, I'm Kunal Chopde</h1>
+                <p>As a passionate data science enthusiast, I create projects that solve real-world problems using data and AI.</p>
+                <a href="/projects" class="button">View My Projects</a>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Kunal Chopde" class="profile-image">
+            </div>
         </div>
     </div>
 </section>

@@ -1,189 +1,318 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif; /* Clean font for readability */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333; /* Dark text for contrast */
+    color: #e0e0e0;
+    background-color: #121212;
 }
 
 header {
-    background: linear-gradient(135deg, #f0e1ff, #fce4ec);
-    padding: 40px 20px; /* Padding for header */
-    text-align: center; /* Centered text */
-    color: #6a1b9a; /* Dark purple color */
+    background: linear-gradient(135deg, #1c1c2f, #2a2a4e);
+    padding: 60px 20px;
+    text-align: center;
+    color: #00bcd4;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid #03a9f4;
 }
 
 header h1 {
-    font-size: 3rem; /* Large title */
-    margin: 0; /* Remove default margin */
+    font-size: 3.8rem;
+    margin: 0;
+    animation: fadeIn 1s ease;
 }
 
 header p {
-    font-size: 1.2rem; /* Subtitle size */
-    margin-top: 10px; /* Spacing above subtitle */
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-weight: 300;
 }
 
-/* Projects Section Styles */
-.projects {
-    background: linear-gradient(135deg, #f0e1ff, #fce4ec);
-    padding: 50px 20px; /* Padding around the section */
-    animation: backgroundAnimation 5s ease infinite alternate; /* Animated background */
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes backgroundAnimation {
-    0% { background: linear-gradient(135deg, #f0e1ff, #fce4ec); }
-    100% { background: linear-gradient(135deg, #f8bbd0, #e1bee7); }
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(135deg, rgba(30, 30, 45, 0.8), rgba(30, 30, 45, 0.8)), url('../images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+    color: #e0e0e0;
+    text-align: center;
 }
 
-.container {
-    max-width: 1200px; /* Max width for content */
-    margin: 0 auto; /* Center the container */
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Section Title */
-.projects h2 {
-    font-size: 2.5rem; /* Title size */
-    color: #6a1b9a; /* Dark purple for contrast */
-    margin-bottom: 10px; /* Spacing below title */
-    text-align: center; /* Center title */
+.hero-text {
+    flex: 1;
+    margin-right: 20px;
 }
 
-/* Section Description */
-.section-description {
-    text-align: center; /* Center the description */
-    font-size: 1.2rem; /* Description size */
-    color: #555; /* Grey text for subtlety */
-    margin-bottom: 40px; /* Spacing below description */
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #00bcd4;
 }
 
-/* Project Grid */
-.project-grid {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between cards */
-}
-
-/* Project Card Styles */
-.project-card {
-    background-color: #ffffff; /* White background for cards */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Prevent overflow */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
-    text-align: center; /* Center text */
-}
-
-/* Project Card Hover Effects */
-.project-card:hover {
-    transform: translateY(-8px); /* Lift effect on hover */
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-/* Project Image Styles */
-.project-image {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    border-bottom: 5px solid #ff6f91; /* Light pink border at the bottom of images */
-}
-
-/* Project Title */
-.project-card h3 {
-    font-size: 1.5rem; /* Title size */
-    color: #ff4081; /* Bright pink text for project titles */
-    margin: 10px 0; /* Spacing around title */
-}
-
-/* Project Description */
-.project-card p {
-    font-size: 1rem; /* Description size */
-    color: #666; /* Dark grey text for description */
-    padding: 0 15px; /* Padding around text */
+.hero-text p {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
 }
 
 /* Button Styles */
 .button {
-    display: inline-block; /* Block-level button */
-    padding: 10px 20px; /* Padding around button */
-    color: #ffffff; /* Text color */
-    background-color: #ff4081; /* Bright pink button color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline from link */
-    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
-    margin: 15px 0; /* Margin around button */
+    display: inline-block;
+    padding: 14px 30px;
+    color: #ffffff;
+    background-color: #03a9f4;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1rem;
 }
 
-/* Button Hover Effects */
 .button:hover {
-    background-color: #ff6f91; /* Slightly lighter pink on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #29b6f6;
+    transform: scale(1.05);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image Styles */
+.profile-image {
+    width: 240px; /* Maintain the size as needed */
+    height: 240px;
+    border-radius: 50%; /* Make it a circle */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    border: 4px solid #03a9f4; /* Color of the border */
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Positioning for pseudo-element */
+}
+
+/* Optional: Adding a glow effect to the border on hover */
+.profile-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Add a pseudo-element for additional styling */
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 4px solid #ff4081; /* Outer border color */
+    opacity: 0.5; /* Optional: add transparency */
+    transition: opacity 0.3s;
+}
+
+.profile-image:hover::before {
+    opacity: 1; /* Show the outer border on hover */
+}
+
+/* Projects Section Styles */
+.projects {
+    background: linear-gradient(135deg, #1c1c2f, #2a2a4e);
+    padding: 80px 20px;
+    animation: backgroundAnimation 5s ease infinite alternate;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #1c1c2f, #2a2a4e); }
+    100% { background: linear-gradient(135deg, #3e3e56, #4e4e6b); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+.projects h2 {
+    font-size: 2.8rem;
+    color: #00bcd4;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Section Description */
+.section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 50px;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Project Card Styles */
+.project-card {
+    background-color: #1e1e2f;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Project Card Hover Effects */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Project Image Styles */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #03a9f4;
+}
+
+/* Project Title */
+.project-card h3 {
+    font-size: 1.6rem;
+    color: #03a9f4;
+    margin: 15px 0;
+}
+
+/* Project Description */
+.project-card p {
+    font-size: 1rem;
+    color: #bbb;
+    padding: 0 15px;
 }
 
 /* Contact Section Styles */
 .contact {
-    background: linear-gradient(135deg, #fce4ec, #f0e1ff); /* Light pink to soft lavender gradient */
-    padding: 50px 20px; /* Padding around the section */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    color: #333; /* Dark text for contrast */
-}
-
-.container {
-    max-width: 800px; /* Max width for content */
-    margin: 0 auto; /* Center the container */
+    background: linear-gradient(135deg, #2a2a4e, #1c1c2f);
+    padding: 80px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    color: #e0e0e0;
+    margin-top: 40px;
 }
 
 /* Section Title */
 .contact h2 {
-    text-align: center; /* Center the title */
-    font-size: 2.5rem; /* Title size */
-    color: #6a1b9a; /* Dark purple for title */
-    margin-bottom: 10px; /* Spacing below title */
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-/* Section Description */
-.contact p {
-    text-align: center; /* Center the description */
-    font-size: 1.2rem; /* Description size */
-    color: #555; /* Grey for better readability */
-    margin-bottom: 20px; /* Spacing below description */
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Contact Details */
-.contact-details {
-    text-align: center; /* Center the details */
-    font-size: 1rem; /* Font size for contact details */
-    color: rgba(0, 0, 0, 0.7); /* Darker grey for contact details */
+/* Input Styles */
+.contact-form input,
+.contact-form textarea {
+    background-color: #1e1e2f;
+    border: 1px solid #03a9f4;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    font-size: 1rem;
 }
 
-/* Link Styles */
-.contact a {
-    color: #ff4081; /* Bright pink for links */
-    text-decoration: none; /* Remove underline */
+/* Input Focus Effects */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #29b6f6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(41, 182, 246, 0.5);
 }
 
-.contact a:hover {
-    text-decoration: underline; /* Underline on hover */
+/* Submit Button Styles */
+.contact-form button {
+    background-color: #03a9f4;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #29b6f6;
+    transform: scale(1.05);
 }
 
 /* Footer Styles */
 footer {
-    background-color: #6a1b9a; /* Dark purple footer */
-    color: #ffffff; /* White text */
-    text-align: center; /* Centered text */
-    padding: 20px; /* Padding for footer */
-    position: relative; /* Position footer at bottom */
-    bottom: 0; /* Stick to bottom */
-    width: 100%; /* Full width */
+    background-color: #1c1c2f;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .projects h2, .contact h2 {
-        font-size: 2rem; /* Smaller title size on mobile */
+    header h1 {
+        font-size: 2.5rem;
     }
-    .project-card h3 {
-        font-size: 1.2rem; /* Smaller project title size on mobile */
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .projects h2 {
+        font-size: 2.2rem;
     }
 }
