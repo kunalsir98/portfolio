@@ -3,51 +3,13 @@
 {% block content %}
 <section class="hero">
     <div class="hero-content">
-        <h2>Welcome to AI with Kunal</h2>
+        <h2>Welcome to AI with kunal</h2>
         <p>Your gateway to the future of AI, data science, and machine learning. Explore, learn, and innovate with us.</p>
         <a href="{{ url_for('projects') }}" class="btn primary-btn">Explore Projects</a>
     </div>
     <div class="hero-image">
-        <img src="path_to_image.jpg" alt="Hero Image">
-    </div>
+        <!-- Use the copied image URL directly here -->
+        <img src=
 </section>
-
-<!-- Chatbot Button -->
-<button id="chat-btn" class="btn primary-btn">Chat with Bot</button>
-
-<!-- Chatbot Section -->
-<section class="chatbot">
-    <h2>Chat with our Bot</h2>
-    <div id="chatbox">
-        <div id="messages"></div>
-        <input type="text" id="message" placeholder="Type your message here">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-</section>
-
-<script>
-    // Toggle visibility of the chatbot
-    document.getElementById('chat-btn').addEventListener('click', function() {
-        document.querySelector('.chatbot').classList.toggle('active');
-    });
-
-    async function sendMessage() {
-        const message = document.getElementById('message').value;
-        if (!message) return;
-        
-        const messagesDiv = document.getElementById('messages');
-        messagesDiv.innerHTML += `<div class='message user'><strong>You:</strong> ${message}</div>`;
-        document.getElementById('message').value = '';
-
-        // Send the message to the Flask backend
-        const response = await fetch('/chat', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message })
-        });
-
-        const data = await response.json();
-        messagesDiv.innerHTML += `<div class='message bot'><strong>Bot:</strong> ${data.response}</div>`;
-    }
-</script>
 {% endblock %}
+
