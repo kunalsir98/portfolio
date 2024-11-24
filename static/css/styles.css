@@ -17,13 +17,13 @@ body {
 header {
     background: linear-gradient(90deg, #4CAF50, #388E3C);
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header .logo h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -32,18 +32,19 @@ header .logo h1 {
 nav ul {
     list-style: none;
     padding: 10px;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -54,40 +55,44 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #333, #4CAF50);
     color: white;
-    padding: 60px 30px;
-    margin-bottom: 50px;
+    padding: 40px 20px;
+    margin-bottom: 30px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .hero-content {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .hero-content h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1rem;
+    margin-bottom: 20px;
     line-height: 1.8;
 }
 
 .hero-image img {
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
 }
 
 .hero .btn {
-    padding: 12px 25px;
+    padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -106,26 +111,27 @@ nav ul li a:hover {
 /* Projects Section */
 .projects {
     text-align: center;
-    padding: 50px 30px;
+    padding: 40px 20px;
 }
 
 .projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 20px;
     color: #4CAF50;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
 }
 
 .project-card {
     background-color: white;
     border-radius: 10px;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -136,14 +142,14 @@ nav ul li a:hover {
 }
 
 .project-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     color: #333;
 }
 
 .project-card p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
     color: #666;
     line-height: 1.6;
 }
@@ -152,7 +158,7 @@ nav ul li a:hover {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
@@ -166,13 +172,13 @@ nav ul li a:hover {
 /* Contact Section */
 .contact {
     background: #fff;
-    padding: 60px 30px;
+    padding: 40px 20px;
     text-align: center;
     border-top: 4px solid #4CAF50;
 }
 
 .contact form {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
 }
@@ -182,10 +188,11 @@ nav ul li a:hover {
     margin-bottom: 5px;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #ddd;
     font-size: 1rem;
@@ -194,7 +201,7 @@ nav ul li a:hover {
 .contact button {
     background-color: #4CAF50;
     color: white;
-    padding: 12px 30px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -211,7 +218,7 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 25px 0;
+    padding: 20px;
 }
 
 footer .social-icons {
@@ -220,14 +227,14 @@ footer .social-icons {
 }
 
 footer .social-icons li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 footer .social-icons a {
     color: white;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
@@ -238,19 +245,18 @@ footer .social-icons a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column;
-        text-align: center;
+        padding: 20px;
     }
 
-    .hero-image {
-        margin-top: 30px;
+    .projects h2 {
+        font-size: 1.8rem;
     }
 
-    .hero .btn {
-        padding: 15px 30px;
+    .hero-content h2 {
+        font-size: 2rem;
     }
 
-    .project-cards {
-        grid-template-columns: 1fr;
+    .contact form {
+        padding: 0 10px;
     }
 }
