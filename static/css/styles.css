@@ -244,19 +244,71 @@ footer .social-icons a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Hero Section */
     .hero {
+        flex-direction: column;
         padding: 20px;
-    }
-
-    .projects h2 {
-        font-size: 1.8rem;
     }
 
     .hero-content h2 {
         font-size: 2rem;
+        margin-bottom: 15px;
     }
 
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    /* Navigation */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    /* Projects Section */
+    .projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    /* Contact Section */
     .contact form {
         padding: 0 10px;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact button {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer .social-icons li {
+        margin: 0 5px;
     }
 }
