@@ -242,31 +242,67 @@ footer .social-icons a:hover {
     color: #4CAF50;
 }
 
-/* Responsive Design */
+/* Responsive Design for Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
+    }
+
+    .hero-content p {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .hero-image img {
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    .project-cards {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 15px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    footer .social-icons li {
+        margin: 0 8px;
+    }
+}
+
+/* Responsive Design for Mobile (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Hero Section */
     .hero {
         flex-direction: column;
         padding: 20px;
     }
 
     .hero-content h2 {
-        font-size: 2rem;
-        margin-bottom: 15px;
+        font-size: clamp(1.6rem, 4vw, 2rem);
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
     }
 
     .hero-image img {
         width: 80%;
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
-    /* Navigation */
     nav ul {
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
@@ -276,26 +312,45 @@ footer .social-icons a:hover {
         margin: 5px 0;
     }
 
-    nav ul li a {
-        font-size: 1rem;
-    }
-
-    /* Projects Section */
-    .projects h2 {
-        font-size: 1.8rem;
-    }
-
     .project-cards {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .project-card {
         padding: 15px;
     }
 
-    /* Contact Section */
     .contact form {
-        padding: 0 10px;
+        padding: 0 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 1rem;
+    }
+
+    .contact button {
+        font-size: 1rem;
+    }
+
+    footer .social-icons li {
+        margin: 0 5px;
+    }
+}
+
+/* For Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: clamp(1.4rem, 4vw, 1.8rem);
+    }
+
+    .hero-content p {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+
+    .hero .btn {
+        padding: 8px 16px;
     }
 
     .contact input,
@@ -303,12 +358,11 @@ footer .social-icons a:hover {
         font-size: 0.9rem;
     }
 
-    .contact button {
-        font-size: 1rem;
+    .project-card h3 {
+        font-size: 1.2rem;
     }
 
-    /* Footer */
-    footer .social-icons li {
-        margin: 0 5px;
+    footer .social-icons a {
+        font-size: 1rem;
     }
 }
