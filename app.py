@@ -14,5 +14,10 @@ def projects():
 def contact():
     return render_template('contact.html', title="Contact")
 
+@app.route('/resources')
+def resources():
+    return render_template('resources.html', title="resources")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
